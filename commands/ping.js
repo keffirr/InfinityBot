@@ -3,6 +3,7 @@ module.exports = {
 	description: 'Ping!',
 	cooldown: 5,
 	execute(message, args, client) {
-		message.channel.send(`Понг! пинг бота ${client.ws.ping}ms`);
+let d = client.ws.ping / 1000
+		message.channel.send(`Понг! задержка бота ${d}секунд`);
 	},
 };

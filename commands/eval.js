@@ -9,7 +9,7 @@ module.exports = {
     args: true,
     usage: 'content',
 	cooldown: 5,
-	execute(message, args, client, api, member, ytdl) {
+	execute(message, args, client, api, member, server, port) {
         const запрос = new Discord.MessageEmbed()
         .setColor('5865f2')
         .setTitle('**Запрос:**')

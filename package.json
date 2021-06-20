@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
 "scripts": {
-  "prod:start": "pm2-runtime app.js"
+  "prod:start": "pm2-runtime index.js"
 }
   "keywords": [],
   "author": "",

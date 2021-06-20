@@ -70,6 +70,8 @@ client.on('message', message => {
 });
 
 client.on('messageDelete', async message => {
+	if(oldMessage.content.startsWith('http://')) return
+	if(oldMessage.content.startsWith('https://')) return
     if(message.author.bot) return
     if(message.channel.id === '788716508306079784') return
     if(message.guild.id !== '662647231698042911') return

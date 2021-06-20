@@ -17,7 +17,8 @@
   },
   "devDependencies": {},
 "scripts": {
-  "start": "pm2-runtime index.js"
+  "start": "pm2 start index.js --watch",
+  "link": "pm2 link o7e23nrctaabupv 4fndohqfapooff3"
 },
   "keywords": [],
   "author": "",

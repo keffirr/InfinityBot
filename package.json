@@ -17,6 +17,7 @@
   },
   "devDependencies": {},
 "scripts": {
+  "express": "npm i express",
   "install": "npm install pm2 -g",
   "start": "pm2-runtime index.js"
 },

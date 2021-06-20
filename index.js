@@ -1,10 +1,3 @@
-const fs = require('fs');
-const Discord = require('discord.js');
-const RichEmbed = require('discord.js');
-const { prefix, token, owner} = require('./config.json');
-const { NekoBot } = require("nekobot-api");
-const api = new NekoBot();
-
 const express = require('express');
 const path = require('path');
 
@@ -19,7 +12,14 @@ server.get('/', (req, res) => {
 
 server.listen(port, () => {
     console.log("Listening on port: " + port)
-})
+
+const fs = require('fs');
+const Discord = require('discord.js');
+const RichEmbed = require('discord.js');
+const { prefix, token, owner} = require('./config.json');
+const { NekoBot } = require("nekobot-api");
+const api = new NekoBot();
+
 setTimeout(бот, 1)
 
 function бот(){
@@ -152,3 +152,4 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
 }
 
 client.login(process.env.BOT_TOKEN); 
+	})

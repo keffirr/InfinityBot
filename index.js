@@ -13,12 +13,23 @@ server.get('/', (req, res) => {
 server.listen(port, () => {
     console.log("Listening on port: " + port)
 
-const fs = require('fs');
-const Discord = require('discord.js');
-const RichEmbed = require('discord.js');
-const { prefix, token, owner} = require('./config.json');
-const { NekoBot } = require("nekobot-api");
-const api = new NekoBot();
+    const fs = require('fs');
+    const Discord = require('discord.js');
+    const RichEmbed = require('discord.js');
+    const { prefix, token, owner} = require('./config.json');
+    const { NekoBot } = require("nekobot-api");
+    const api = new NekoBot();
+    
+    const client = new Discord.Client();
+    client.commands = new Discord.Collection();
+    
+    const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+    
+    for (const file of commandFiles) {
+        const command = require(`./commands/${file}`);
+    
+        client.commands.set(command.name, command);
+    }
 
 setTimeout(бот, 1)
 

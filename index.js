@@ -5,18 +5,11 @@ const { prefix, token, owner} = require('./config.json');
 const { NekoBot } = require("nekobot-api");
 const api = new NekoBot();
 
-var express = require('express');
-var app     = express();
-
-app.set('port', (process.env.PORT || 3000));
-
-//For avoidong Heroku $PORT error
-app.get('/', function(request, response) {
-    var result = 'App is running'
-    response.send(result);
-}).listen(app.get('port'), function() {
-    console.log('App is running, server is listening on port ', app.get('port'));
-});
+const port = process.env.port || 8080;
+app.listen(port, () => {
+    console.log(process.env.port);
+    console.log(`SERVER is running at ${port}`);
+})
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();

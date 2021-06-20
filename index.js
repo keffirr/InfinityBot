@@ -130,7 +130,6 @@ client.on('messageDelete', async message => {
 
 client.on('messageUpdate', (oldMessage, newMessage) => { 
     const MessageLog = client.channels.cache.find(channel => channel.id ==='855853039058681886');
-    if(oldMessage.guild.id !== '662647231698042911') return
     if(oldMessage.channel.id === MessageLog) return
     if (!oldMessage.author) return;
  var embed = new Discord.MessageEmbed()

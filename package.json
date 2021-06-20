@@ -16,9 +16,9 @@
     "ytdl-core": "^4.8.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "prod:start": "pm2-runtime app.js"
+}
   "keywords": [],
   "author": "",
   "license": "ISC"

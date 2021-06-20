@@ -18,7 +18,7 @@
   "devDependencies": {},
 "scripts": {
   "install": "npm install pm2 -g",
-  "start": "pm2-runtime index.js -i max",
+  "start": "pm2-runtime index.js -i max"
 },
   "keywords": [],
   "author": "",

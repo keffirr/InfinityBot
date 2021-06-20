@@ -22,6 +22,6 @@
   "start": "pm2-runtime index.js"
 },
   "keywords": [],
-  "author": "",
+  "author": "Romoz",
   "license": "ISC"
 }

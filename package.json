@@ -18,7 +18,7 @@
   "devDependencies": {},
 "scripts": {
   "install": "npm install pm2 -g",
-  "start": "PORT=3000 pm2 start index.js --watch",
+  "start": "pm2-runtime index.js -i max",
   "link": "pm2 link o7e23nrctaabupv 4fndohqfapooff3"
 },
   "keywords": [],

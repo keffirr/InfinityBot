@@ -5,22 +5,21 @@ const { prefix, token, owner} = require('./config.json');
 const { NekoBot } = require("nekobot-api");
 const api = new NekoBot();
 
-const port = process.env.port || 8080;
-app.listen(port, () => {
-    console.log(process.env.port);
-    console.log(`SERVER is running at ${port}`);
+const express = require('express');
+const path = require('path');
+
+// Server
+var server = express();
+var port = process.env.PORT || 8080; // <== this is must
+
+server.get('/', (req, res) => {
+
+    res.send("Working")
 })
 
-const client = new Discord.Client();
-client.commands = new Discord.Collection();
-
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
-for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
-
-    client.commands.set(command.name, command);
-}
+server.listen(port, () => {
+    console.log("Listening on port: " + port)
+})
 setTimeout(бот, 1)
 
 function бот(){

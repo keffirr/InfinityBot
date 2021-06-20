@@ -79,7 +79,7 @@ client.on('message', message => {
         }
     }
         try {
-        command.execute(message, args, client, api, Discord);
+        command.execute(message, args, client, api, Discord, server, port);
     } catch (error) {
         console.error(error);
     }

@@ -147,7 +147,6 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
 }
 
 client.login(process.env.BOT_TOKEN); 
-	})
 	const express = require('express');
 const path = require('path');
 
@@ -161,3 +160,4 @@ server.get('/', (req, res) => {
 
 server.listen(port, () => {
     console.log("Listening on port: " + port)
+})

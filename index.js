@@ -1,17 +1,3 @@
-const express = require('express');
-const path = require('path');
-
-var server = express();
-var port = process.env.PORT || 8080; // <== this is must
-
-server.get('/', (req, res) => {
-
-        res.send(`<p>'Бот включен\nи нагружен на ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100} MB`)
-})
-
-server.listen(port, () => {
-    console.log("Listening on port: " + port)
-
     const fs = require('fs');
     const Discord = require('discord.js');
     const RichEmbed = require('discord.js');
@@ -162,3 +148,16 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
 
 client.login(process.env.BOT_TOKEN); 
 	})
+	const express = require('express');
+const path = require('path');
+
+var server = express();
+var port = process.env.PORT || 8080; // <== this is must
+
+server.get('/', (req, res) => {
+
+        res.send(`<p>'Бот включен\nи нагружен на ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100} MB`)
+})
+
+server.listen(port, () => {
+    console.log("Listening on port: " + port)

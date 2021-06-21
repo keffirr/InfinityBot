@@ -6,14 +6,18 @@
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "booru": "^2.4.0",
+    "curl": "^0.1.4",
+    "discord-buttons": "^3.2.1",
     "discord.js": "^12.5.3",
     "express": "^4.17.1",
     "ffmpeg-static": "^4.4.0",
+    "html": "^1.0.0",
     "libsodium-wrappers": "^0.7.8",
     "nekobot-api": "^2.1.0",
     "nekos.life": "^2.0.7",
     "opusscript": "0.0.7",
     "pm2": "^5.1.0",
+    "socket.io": "^4.1.2",
     "ytdl-core": "^4.8.2"
   },
   "devDependencies": {},

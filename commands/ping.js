@@ -15,6 +15,7 @@ let d = client.ws.ping / 1000
 client.on('clickButton', async (button) => {
     if(button.id === 'click_to_function') {
 button.message.edit(`Понг! Задержка бота ${d}секунд`)
+await button.defer()
     }})
 	},
 };

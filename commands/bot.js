@@ -5,10 +5,10 @@ const client = new Discord.Client();
 const fs = require('fs')
 const path = require('path')
 module.exports = {
-	name: 'link',
+	name: 'bot',
 	description: 'eval',
 	cooldown: 5,
 	execute(message, args, client, api) {
 client.generateInvite({
  permissions: ['ADMINISTRATOR']}).then(link => message.channel.send(`Ссылка на бота ${link}`))
-  }
+  }}

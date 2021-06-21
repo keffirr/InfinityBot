@@ -10,5 +10,5 @@ module.exports = {
 	cooldown: 5,
 	execute(message, args, client, api) {
 client.generateInvite({
- permissions: ['ADMINISTRATOR']}).then(link => message.channel.send(`Ссылка на бота ${link}`))
+ permissions: ['ADMINISTRATOR']}).then(link => message.channel.send(`Ссылка на бота ${link} `))
   }}

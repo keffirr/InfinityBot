@@ -6,7 +6,7 @@ var port = process.env.PORT || 8080; // <== this is must
 
 server.get('/', (req, res) => {
 
-    res.send("Working")
+        res.send(`<p>'Бот включен\nи нагружен на ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100} MB`)
 })
 
 server.listen(port, () => {

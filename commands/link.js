@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const fs = require('fs')
 const path = require('path')
 module.exports = {
-	name: 'секс',
+	name: 'link',
 	description: 'eval',
 	cooldown: 5,
 	execute(message, args, client, api) {

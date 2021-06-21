@@ -18,4 +18,4 @@ const embed = new Discord.MessageEmbed()
 .setFooter(`${message.author.tag}`, `${message.author.displayAvatarURL({ format: "png", dynamic: true })}`)
 .setColor('FFFFFF');
 message.channel.send(`https://status.romoz.ml`, { embed })
-}
+}}

@@ -71,8 +71,6 @@ client.on('message', message => {
 });
 
 client.on('messageDelete', async message => {
-	if(message.content.startsWith('http://')) return
-	if(message.content.startsWith('https://')) return
     if(message.author.bot) return
     if(message.channel.id === '788716508306079784') return
     if(message.guild.id !== '662647231698042911') return
@@ -114,9 +112,11 @@ client.on('messageDelete', async message => {
 });
 
 client.on('messageUpdate', (oldMessage, newMessage) => { 
+	if(oldMessage.content.startsWith('http://')) return
+	if(oldMessage.content.startsWith('https://')) return
     const MessageLog = client.channels.cache.find(channel => channel.id ==='855853039058681886');
     if(oldMessage.channel.id === MessageLog) return
-    if (!oldMessage.author) return;
+    if (oldMessage.author.bot) return;
  var embed = new Discord.MessageEmbed()
  .setTitle('Отредактированные сообщения')
  .setFooter(`${oldMessage.author.tag}`, `${oldMessage.author.displayAvatarURL({ format: "png", dynamic: true })}`)

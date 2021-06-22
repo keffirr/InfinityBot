@@ -28,49 +28,50 @@ function бот(){
     });
 
 client.on('message', message => {
-    const cooldowns = new Discord.Collection();
-    if(message.content.startsWith())
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+const cooldowns = new Discord.Collection();
+if(message.content.startsWith())
+if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-    const args = message.content.slice(prefix.length).trim().split(/ +/);
-    const commandName = args.shift().toLowerCase();
-    const command = client.commands.get(commandName)
-		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+const args = message.content.slice(prefix.length).trim().split(/ +/);
+const commandName = args.shift().toLowerCase();
+const command = client.commands.get(commandName)
+    || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-	if (!command) return;
-    if (command.guildOnly && message.channel.type === 'dm') {
-        return message.reply('I can\'t execute that command inside DMs!');
+if (!command) return;
+if (command.guildOnly && message.channel.type === 'dm') {
+    return message.reply('I can\'t execute that command inside DMs!');
+}
+if (command.args && !args.length) {
+    let reply = `Вы ничего не указали в данной команде, ${message.author}!`;
+
+    if (command.usage) {
+        reply += `\nПравильное использование этой команды: \`${prefix}${command.name} ${command.usage}\``;
     }
-    if (command.args && !args.length) {
-        let reply = `Вы ничего не указали в данной команде, ${message.author}!`;
 
-		if (command.usage) {
-			reply += `\nПравильное использование этой команды: \`${prefix}${command.name} ${command.usage}\``;
-		}
+    return message.channel.send(reply), client.user.setActivity(`${args[0]}`)
+}
+if (!cooldowns.has(command.name)) {
+    cooldowns.set(command.name, new Discord.Collection());
+}
+const now = Date.now();
+const timestamps = cooldowns.get(command.name);
+const cooldownAmount = (command.cooldown || 5) * 1000;
 
-		return message.channel.send(reply), client.user.setActivity(`${args[0]}`)
-	}
-    if (!cooldowns.has(command.name)) {
-        cooldowns.set(command.name, new Discord.Collection());
-    }
-    const now = Date.now();
-    const timestamps = cooldowns.get(command.name);
-    const cooldownAmount = (command.cooldown || 5) * 1000;
-    
-    if (timestamps.has(message.author.id)) {
-        const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+if (timestamps.has(message.author.id)) {
+    const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
 
-        if (now < expirationTime) {
-            const timeLeft = (expirationTime - now) / 1000;
-            return message.reply(`пожалуйста подождите ${timeLeft.toFixed(1)} ещё секунда(ы) перед повторным использованием \`${command.name}\` команды.`);
-        }
+    if (now < expirationTime) {
+        const timeLeft = (expirationTime - now) / 1000;
+        return message.reply(`пожалуйста подождите ${timeLeft.toFixed(1)} ещё секунда(ы) перед повторным использованием \`${command.name}\` команды.`);
     }
-        try {
-        command.execute(message, args, client, api, Discord, server, port);
-    } catch (error) {
-        console.error(error);
-    }
+}
+    try {
+    command.execute(message, args, client, api, Discord, server, port);
+} catch (error) {
+    console.error(error);
+}
 });
+}
 
 client.on('messageDelete', async message => {
     if(message.author.bot) return

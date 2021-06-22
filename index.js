@@ -32,7 +32,7 @@ process.on('unhandledRejection', error => {
     });
 
 client.on('message', message => {
-console.log(`Выполнена команда `${message.content}, пользователем ${message.author.tag} в канале ${message.channel.name}, на сервере ${message.guild.name}`)
+console.log(`Выполнена команда ${message.content}, пользователем ${message.author.tag} в канале ${message.channel.name}, на сервере ${message.guild.name}`)
 const cooldowns = new Discord.Collection();
 if(message.content.startsWith())
 if (!message.content.startsWith(prefix) || message.author.bot) return;

@@ -21,6 +21,10 @@ const { MessageButton, MessageActionRow } = require('discord-buttons');
 setTimeout(бот, 1)
 
 function бот(){
+process.on('unhandledRejection', error => {
+    console.log(`${error}\n`)
+});
+
     client.once('ready', () => {
         console.log('Ready!');
         client.user.setStatus("idle")
@@ -28,6 +32,7 @@ function бот(){
     });
 
 client.on('message', message => {
+console.log(`Выполнена команда `${message.content}, пользователем ${message.author.tag} в канале ${message.channel.name}, на сервере ${message.guild.name}`)
 const cooldowns = new Discord.Collection();
 if(message.content.startsWith())
 if (!message.content.startsWith(prefix) || message.author.bot) return;

@@ -7,7 +7,7 @@ module.exports = {
     cooldown: 5,
     execute(message, args) {
 if(message.author.bot) return
-const clientMember = message.guild.members.cache.get(client.user.id);
+const clientMember = message.guild.members.cache.get(message.author.id);
 if(clientMember.permissions.has("MENNAGE_MESSAGES")) {
 		const amount = parseInt(args[0]) + 1;
     

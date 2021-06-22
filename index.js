@@ -4,6 +4,7 @@
     const { prefix, token, owner} = require('./config.json');
     const { NekoBot } = require("nekobot-api");
     const api = new NekoBot();
+    const chalk = require('chalk')
     
     const client = new Discord.Client();
 const disbut = require('discord-buttons')(client)
@@ -32,7 +33,6 @@ process.on('unhandledRejection', error => {
     });
 
 client.on('message', message => {
-console.log(`Выполнена команда ${message.content}, пользователем ${message.author.tag} в канале ${message.channel.name}, на сервере ${message.guild.name}`)
 const cooldowns = new Discord.Collection();
 if(message.content.startsWith())
 if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -60,7 +60,7 @@ if (command.args && !args.length) {
         reply += `\nПравильное использование этой команды: \`${prefix}${command.name} ${command.usage}\``;
     }
 
-    return message.channel.send(reply), client.user.setActivity(`${args[0]}`)
+    return message.channel.send(reply).then(console.log(chalk.yellow(`Выполнена команда ${message.content}, пользователем ${message.author.tag} в канале ${message.channel.name}, на сервере ${message.guild}`)))
 }
 if (!cooldowns.has(command.name)) {
     cooldowns.set(command.name, new Discord.Collection());
@@ -78,7 +78,7 @@ if (timestamps.has(message.author.id)) {
     }
 }
     try {
-    command.execute(message, args, client, api, Discord, server, port);
+    command.execute(message, args, client, api, Discord, server, port, chalk);
 } catch (error) {
     console.error(error);
 }

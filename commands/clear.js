@@ -7,7 +7,7 @@ module.exports = {
     cooldown: 5,
     execute(message, args) {
 if(message.author.bot) return
-if(message.guid.me.roles.cache.has('732196406491611157')) return message.channel.send(нельзя)
+if(!message.guild.me.roles.cache.has('732196406491611157')) return message.channel.send(нельзя)
 		const amount = parseInt(args[0]) + 1;
     
         if (isNaN(amount)) {

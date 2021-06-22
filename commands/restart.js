@@ -8,10 +8,11 @@ module.exports = {
 	description: 'eval',
 	cooldown: 5,
 	execute(message, args) {
-		if(message.author.id !== owner) return message.channel.send(нельзя)
+const clientMember = message.guild.members.cache.get(message.author.id);
+if(clientMember.permissions.has("ADMINISTRATOR")) {
 message.channel.send('Перезагрузка...')
 setTimeout(reload, 3000)
 function reload(){
 process.exit()
-}
+}}
     }}

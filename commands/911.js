@@ -10,10 +10,11 @@ module.exports = {
 	cooldown: 5,
         guildOnly: true,
 	execute(message, args, client, api) {
+if(message.content.startsWith('911') {
 const moder = '732196406491611157'
 const embed = new Discord.MessageEmbed()
 .setTitle('Время вызова')
 .setColor('5865f2')
 .setTimestamp();
 message.channel.send(`<@${message.author.id}> вызвал <@&${moder}>`, { embed} )
-  }}
+  }}}

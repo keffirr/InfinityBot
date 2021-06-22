@@ -6,9 +6,8 @@ module.exports = {
     usage: '1-99',
     cooldown: 5,
     execute(message, args) {
-const member = message.guild.me
-if(!member.roles.cache.has('732196406491611157')) return message.channel.send(нельзя)
-if(!message.member.guild.me.hasPermission("MANAGE_MESSAGES")) return
+if(message.author.bot) return
+if(message.guid.me.roles.cache.has('732196406491611157')) return message.channel.send(нельзя)
 		const amount = parseInt(args[0]) + 1;
     
         if (isNaN(amount)) {

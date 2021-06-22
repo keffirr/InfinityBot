@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const fs = require('fs')
 const path = require('path')
 module.exports = {
-	name: '!911',
+	name: '911',
 	description: 'eval',
 	cooldown: 5,
         guildOnly: true,

@@ -39,11 +39,6 @@ module.exports = {
     .setEmoji('🔎')
     .setLabel('boobs') 
     .setID('6')
-    let w = new MessageButton()
-    .setStyle('blurple')
-    .setEmoji('🔎')
-    .setLabel('cosplay') 
-    .setID('7')
     let u = new MessageButton()
     .setStyle('blurple')
     .setEmoji('🔎')
@@ -54,7 +49,7 @@ module.exports = {
     .setEmoji('🔎')
     .setLabel('ass') 
     .setID('9')
-    if(message.member.guild.me.hasPermission('ADMINISTRATOR') || message.member.guild.me.hasPermmission('MANAGE_MESSAGES')){
+    if(message.member.guild.me.hasPermission('ADMINISTRATOR') || message.member.guild.me.hasPermission('MANAGE_MESSAGES')){
     if(message.content === '!секс nsfw') return message.channel.send('Правильное использование \`\`\`!секс nsfw on\n!секс nsfw off\`\`\`')
     if(message.content === '!секс nsfw on') return message.channel.setNSFW(true), message.channel.send('NSFW метка успешно включена').then(message => {
         message.delete({ timeout: 10000 })
@@ -126,16 +121,6 @@ module.exports = {
               button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
-		  if(button.id === '7') {
-                  const image = await api.get('cosplay');
-                  const embed = new Discord.MessageEmbed()
-                  .setTitle("cosplay")
-                  .setImage(image)
-                  .setColor('RANDOM')
-                  .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
-            await button.defer()
-		  }
 		  if(button.id === '8') {
                   const image = await api.get('4k');
                   const embed = new Discord.MessageEmbed()
@@ -162,11 +147,10 @@ let buttonRow = new MessageActionRow()
 .addComponent(a)
 .addComponent(b)
 .addComponent(c)
-.addComponent(d)
-.addComponent(r);
+.addComponent(d);
 let buttonRow2 = new MessageActionRow()
+.addComponent(r)
 .addComponent(e)
-.addComponent(w)
 .addComponent(u)
 .addComponent(o);
 const search = [

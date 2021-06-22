@@ -56,7 +56,6 @@ module.exports = {
     } else {
 	    message.channel.send('Недостаточно прав для использования данной команды, чтобы использовать даанную команду вам нужно иметь одно из из перечисленных прав \`Администратор\`, \`Управление сообщениями\`.')
     }
-        if (message.channel.nsfw) {
           client.on('clickButton', async (button) => {
             if(button.id === '1') {
               const image = await api.get('anal');
@@ -148,7 +147,7 @@ module.exports = {
               button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
             await button.defer()
 		  }
-            }})
+            });
 
 let buttonRow = new MessageActionRow()
 .addComponent(a)
@@ -161,10 +160,14 @@ let buttonRow2 = new MessageActionRow()
 .addComponent(w)
 .addComponent(u)
 .addComponent(o);
-
-            (async () => {
+const search = [
+  "anal",
+  "pussy",
+  "hentai",
+];
+if (message.channel.nsfw) {
           return message.channel.send("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { components: [ buttonRow ] });
-        })();
+
         } else {
             message.channel.send(`поставьте метку NSFW, чтобы данная команда работала в канале <#${message.channel.id}>`)
         }

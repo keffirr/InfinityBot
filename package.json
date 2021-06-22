@@ -6,6 +6,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "booru": "^2.4.0",
+    "chalk": "^4.1.1",
     "curl": "^0.1.4",
     "discord-buttons": "^3.2.1",
     "discord.js": "^12.5.3",

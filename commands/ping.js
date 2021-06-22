@@ -12,8 +12,10 @@ let d = client.ws.ping / 1000
 		message.channel.send(`Понг! Задержка бота ${d}секунд `, button)
 client.on('clickButton', async (button) => {
     if(button.id === 'click_to_function') {
-button.message.edit(`Понг! Задержка бота ${client.ws.ping / 1000}секунд(обновленная задержка ${client.ws.ping / 1000})`)
+setTimeout(()=>{
+button.message.edit(`Понг! Задержка бота ${client.ws.ping / 1000}секунд`)
 await button.defer()
+}, 5000)
     }})
 	},
 };

@@ -15,7 +15,7 @@ client.on('clickButton', async (button) => {
 setTimeout(кнопка, 5000)
 function кнопка() {
 button.message.edit(`Понг! Задержка бота ${client.ws.ping / 1000}секунд`)
-await button.defer()
+button.defer()
 }
     }})
 	},

@@ -71,7 +71,6 @@ if (timestamps.has(message.author.id)) {
     console.error(error);
 }
 });
-}
 
 client.on('messageDelete', async message => {
     if(message.author.bot) return

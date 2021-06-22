@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-	name: '!avatar',
+	name: 'avatar',
     aliases: ['icon', 'pfp', 'av'],
     description: 'Вы должны увидеть свой прекрасный аватар с помощью этой команды!',
     cooldown: 5,

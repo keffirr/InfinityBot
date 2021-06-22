@@ -8,6 +8,9 @@ module.exports = {
     execute(message, args) {
 if(message.author.bot) return
 const clientMember = message.guild.members.cache.get(message.author.id);
+if(!clientMember.permissions.has("MENNAGE_MESSAGES")) {
+message.channel.send('У вас недостаточно прав для использования этой команды, чтобы ее использовать вам нужно иметь право на удаление сообщений.')
+}
 if(clientMember.permissions.has("MENNAGE_MESSAGES")) {
 		const amount = parseInt(args[0]) + 1;
     

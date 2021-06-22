@@ -8,6 +8,7 @@ module.exports = {
 	name: '911',
 	description: 'eval',
 	cooldown: 5,
+        guildOnly: true,
 	execute(message, args, client, api) {
 const moder = '732196406491611157'
 const embed = new Discord.MessageEmbed()

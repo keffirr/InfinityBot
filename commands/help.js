@@ -40,6 +40,6 @@ if (command.aliases) data.push(`**Псевдонимы:** ${command.aliases.join
 if (command.description) data.push(`**Описание:** ${command.description}`);
 if (command.usage) data.push(`**Использование:** ${prefix}${command.name} ${command.usage}`);
 
-message.channel.send(embed);
+message.channel.send(data, { split: true });
 	},
 };

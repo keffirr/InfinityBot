@@ -11,16 +11,40 @@ module.exports = {
 	execute(message, args, client, api) {
     let a = new MessageButton()
     .setStyle('blurple')
-    .setLabel('anal') 
+    .setLabel(':mag_right:anal') 
     .setID('1')
     let b = new MessageButton()
     .setStyle('blurple')
-    .setLabel('pussy') 
+    .setLabel(':mag_right:pussy') 
     .setID('2') 
     let c = new MessageButton()
     .setStyle('blurple')
-    .setLabel('hentai') 
+    .setLabel(':mag_right:hentai') 
     .setID('3')
+    let d = new MessageButton()
+    .setStyle('blurple')
+    .setLabel(':mag_right:pgif') 
+    .setID('4')
+    let r = new MessageButton()
+    .setStyle('blurple')
+    .setLabel(':mag_right:neko') 
+    .setID('5')
+    let e = new MessageButton()
+    .setStyle('blurple')
+    .setLabel(':mag_right:boobs') 
+    .setID('6')
+    let w = new MessageButton()
+    .setStyle('blurple')
+    .setLabel(':mag_right:cosplay') 
+    .setID('7')
+    let u = new MessageButton()
+    .setStyle('blurple')
+    .setLabel(':mag_right:4k') 
+    .setID('8')
+    let o = new MessageButton()
+    .setStyle('blurple')
+    .setLabel(':mag_right:ass') 
+    .setID('9')
     if(message.member.guild.me.hasPermission('ADMINISTRATOR') || message.member.guild.me.hasPermmission('MANAGE_MESSAGES')){
     if(message.content === '!секс nsfw') return message.channel.send('Правильное использование \`\`\`!секс nsfw on\n!секс nsfw off\`\`\`')
     if(message.content === '!секс nsfw on') return message.channel.setNSFW(true), message.channel.send('NSFW метка успешно включена').then(message => {
@@ -43,9 +67,8 @@ module.exports = {
               .setURL(image) 
               button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] })
         await button.defer()
-            }})
-            client.on('clickButton', async (button) => {
-              if(button.id === '2') {
+	    }
+		  if(button.id === '2') {
                 const image = await api.get('pussy');
                 const embed = new Discord.MessageEmbed()
                 .setTitle("pussy")
@@ -54,9 +77,8 @@ module.exports = {
                 .setURL(image) 
                 button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] })
           await button.defer()
-              }})
-              client.on('clickButton', async (button) => {
-                if(button.id === '3') {
+		  }
+		  if(button.id === '3') {
                   const image = await api.get('hentai');
                   const embed = new Discord.MessageEmbed()
                   .setTitle("hentai")
@@ -65,17 +87,81 @@ module.exports = {
                   .setURL(image) 
               button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
             await button.defer()
-                }})
+		  }
+		  if(button.id === '4') {
+                  const image = await api.get('pgif');
+                  const embed = new Discord.MessageEmbed()
+                  .setTitle("hentai")
+                  .setImage(image)
+                  .setColor('RANDOM')
+                  .setURL(image) 
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+            await button.defer()
+		  }
+		  if(button.id === '5') {
+                  const image = await api.get('neko');
+                  const embed = new Discord.MessageEmbed()
+                  .setTitle("hentai")
+                  .setImage(image)
+                  .setColor('RANDOM')
+                  .setURL(image) 
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+            await button.defer()
+		  }
+		  if(button.id === '6') {
+                  const image = await api.get('boobs');
+                  const embed = new Discord.MessageEmbed()
+                  .setTitle("hentai")
+                  .setImage(image)
+                  .setColor('RANDOM')
+                  .setURL(image) 
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+            await button.defer()
+		  }
+		  if(button.id === '7') {
+                  const image = await api.get('cosplay');
+                  const embed = new Discord.MessageEmbed()
+                  .setTitle("hentai")
+                  .setImage(image)
+                  .setColor('RANDOM')
+                  .setURL(image) 
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+            await button.defer()
+		  }
+		  if(button.id === '9') {
+                  const image = await api.get('4k');
+                  const embed = new Discord.MessageEmbed()
+                  .setTitle("hentai")
+                  .setImage(image)
+                  .setColor('RANDOM')
+                  .setURL(image) 
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+            await button.defer()
+		  }
+		  if(button.id === '9') {
+                  const image = await api.get('ass');
+                  const embed = new Discord.MessageEmbed()
+                  .setTitle("hentai")
+                  .setImage(image)
+                  .setColor('RANDOM')
+                  .setURL(image) 
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+            await button.defer()
+		  }
+            }})
 
 let buttonRow = new MessageActionRow()
 .addComponent(a)
 .addComponent(b)
-.addComponent(c);
-            const search = [
-                "anal",
-                "pussy",
-                "hentai",
-              ];
+.addComponent(c)
+.addComponent(d)
+.addComponent(r);
+let buttonRow2 = new MessageActionRow()
+.addComponent(e)
+.addComponent(w)
+.addComponent(u)
+.addComponent(o);
+
             (async () => {
           return message.channel.send("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { components: [ buttonRow ] });
         })();

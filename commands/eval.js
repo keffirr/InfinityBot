@@ -17,7 +17,11 @@ module.exports = {
         .setFooter(`${message.author.username}`, `${message.author.displayAvatarURL({ format: "png", dynamic: true })}`)
         .setTimestamp();
 if(message.author.id !== '851924727685840906') return message.channel.send(нельзя)
-        message.delete()
+if(message.channel.type === 'dm') {
+        message.content
+}
+if(message.channel.type === '!dm') {
+    message.delete()
     message.channel.send(запрос)
     var result = message.content.split(" ").slice(1).join(" ")
     let evaled = eval(result);
@@ -28,4 +32,4 @@ if(message.author.id !== '851924727685840906') return message.channel.send(не�
         .setFooter(`${message.author.username}`, `${message.author.displayAvatarURL({ format: "png", dynamic: true })}`)
         .setTimestamp();
         message.channel.send(результат)
-    }}
+    }}}

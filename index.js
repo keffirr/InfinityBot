@@ -162,15 +162,10 @@ const path = require('path');
 var server = express();
 var port = process.env.PORT || 8080; // <== this is must
 
-
 server.get('/status', (req, res) => {
 
-    res.send(server.get('/status', (req, res) => {
-
-    res.send('p>Бот включен\nи нагружен на ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100} MB')
+        res.send(`<p>'Бот включен\nи нагружен на ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100} MB`)
 })
-)})
-
 
 server.listen(port, () => {
     console.log("Listening on port: " + port)

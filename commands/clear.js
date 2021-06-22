@@ -5,6 +5,8 @@ module.exports = {
     args: true,
     usage: '1-99',
     cooldown: 5,
+    guildOnly: true,
+    permissions: 'MANAGE_MESSAGES',
     execute(message, args) {
 if(message.author.bot) return
 const clientMember = message.guild.members.cache.get(message.author.id);

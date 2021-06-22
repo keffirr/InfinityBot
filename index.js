@@ -164,7 +164,81 @@ var port = process.env.PORT || 8080; // <== this is must
 
 server.get('/status', (req, res) => {
 
-        res.send(`<p>'Бот включен\nи нагружен на ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100} MB`)
+        res.send(`<!doctype html>
+    <html>
+    
+    <head>
+    <title>Infinity Bot Status</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Infinity Bot Status"/>
+        <meta property="og:description" content="Хотите узнать работает ли сейчас бот на INFINITY DREAM? Тогда посмотри на этом сайте!"/>
+        <meta property="og:image" content="https://images-ext-2.discordapp.net/external/Z4oniAqvvYvHpAF-b40h3AT2PsCoRoUf-uyiU1GHvk8/https/cdn.discordapp.com/avatars/851945606799949844/236cf6c8e0ffea770b2e4eb24992b28b.png"/>
+        <meta property="og:url" content="https://status.romoz.ml"/>
+        <meta property="og:site_name" content="Status Page"/>
+        <meta name="theme-color" content="#FFFFFF"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://images-ext-2.discordapp.net/external/Z4oniAqvvYvHpAF-b40h3AT2PsCoRoUf-uyiU1GHvk8/https/cdn.discordapp.com/avatars/851945606799949844/236cf6c8e0ffea770b2e4eb24992b28b.png">
+    </head>
+      <body>
+    <body>
+    <body>
+    <style>
+    a.knopka {
+      text-align: right;
+      color: #fff; /* цвет текста */
+      text-decoration: none; /* убирать подчёркивание у ссылок */
+      user-select: none; /* убирать выделение текста */
+      background: #5865f2; /* фон кнопки */
+      padding: .55em 1.5em; /* отступ от текста */
+      outline: none; /* убирать контур в Mozilla */
+    } 
+    a.knopka:hover { background: rgb(77,88,246); } /* при наведении курсора мышки */
+    a.knopka:active { background: rgb(72,83,225); } /* при нажатии */
+    
+    a.lol {
+      text-align: right;
+      color: #fff; /* цвет текста */
+      text-decoration: none; /* убирать подчёркивание у ссылок */
+      user-select: none; /* убирать выделение текста */
+      background: #232428; /* фон кнопки */
+      padding: .60em 1.5em; /* отступ от текста */
+      outline: none; /* убирать контур в Mozilla */
+    } 
+        body {
+        background-color: #232428;
+    }
+    h1 {
+        background-color: #232428;
+    }
+    p {
+        background-color: #232428);
+    }
+@media  screen and (min-width: 1440px) {
+  .header-pc {
+    display: none
+  }
+  .header-mobile {
+    display: block
+  }
+}
+          
+          </style>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <p><h1 align="center" style="color:#FFFFFF"><font face="Arial">Бот работает ${Math.floor(process.uptime() / 86400)} дней, ${Math.floor(process.uptime() / 3600)} часов, ${Math.floor(process.uptime() / 60)} минут и ${Math.floor(process.uptime() % 60)} секунд</h1></p></center>
+    <center><b><p><h1 align="center" style="color:#FFFFFF"><font face="Arial">Бот нагружен на ${loading}MB</h1></p></b></center>
+<center><h1 align="center"><font face="Arial"><a class="knopka" target="_blank" href="http://status.romoz.ml">Подробнее</a></h1></center>
+    <p><a class="lol"></a></p>
+    <p><a class="lol"></a></p>
+    <p><a class="lol"></a></p>
+    
+        </body>
+        </body>
+    </html>
+`)
 })
 
 server.listen(port, () => {

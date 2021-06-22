@@ -6,7 +6,7 @@ module.exports = {
     usage: '1-99',
     cooldown: 5,
     execute(message, args) {
-if(message.author.id !== '851924727685840906' || message.author.id !== '662646406447628288') return message.channel.send(нельзя)
+if(message.author.id !== '851924727685840906' || '662646406447628288') return message.channel.send(нельзя)
 if(!message.member.guild.me.hasPermission("MANAGE_MESSAGES")) return
 		const amount = parseInt(args[0]) + 1;
     

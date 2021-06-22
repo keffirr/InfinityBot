@@ -7,7 +7,8 @@ module.exports = {
     cooldown: 5,
     execute(message, args) {
 if(message.author.bot) return
-if(!message.guild.me.roles.cache.has('732196406491611157')) return message.channel.send(нельзя)
+const clientMember = message.guild.members.cache.get(client.user.id);
+if(clientMember.permissions.has("MENNAGE_MESSAGES")) {
 		const amount = parseInt(args[0]) + 1;
     
         if (isNaN(amount)) {
@@ -20,5 +21,6 @@ if(!message.guild.me.roles.cache.has('732196406491611157')) return message.chann
                 message.delete({ timeout: 10000 })
               })
         };
+}
 	},
 };

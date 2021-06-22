@@ -136,7 +136,7 @@ module.exports = {
               button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
-		  if(button.id === '9') {
+		  if(button.id === '8') {
                   const image = await api.get('4k');
                   const embed = new Discord.MessageEmbed()
                   .setTitle("4k")

@@ -73,7 +73,7 @@ module.exports = {
               .setImage(image)
               .setColor('RANDOM')
               .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] })
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] })
         await button.defer()
 	    }
 		  if(button.id === '2') {
@@ -83,7 +83,7 @@ module.exports = {
                 .setImage(image)
                 .setColor('RANDOM')
                 .setURL(image) 
-                button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] })
+                button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] })
           await button.defer()
 		  }
 		  if(button.id === '3') {
@@ -93,7 +93,7 @@ module.exports = {
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
 		  if(button.id === '4') {
@@ -103,7 +103,7 @@ module.exports = {
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
 		  if(button.id === '5') {
@@ -113,7 +113,7 @@ module.exports = {
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
 		  if(button.id === '6') {
@@ -123,7 +123,7 @@ module.exports = {
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
 		  if(button.id === '7') {
@@ -133,7 +133,7 @@ module.exports = {
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
 		  if(button.id === '9') {
@@ -143,7 +143,7 @@ module.exports = {
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
 		  if(button.id === '9') {
@@ -153,7 +153,7 @@ module.exports = {
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
-              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow ] });
+              button.message.edit("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { embed, components: [ buttonRow, buttonRow2 ] });
             await button.defer()
 		  }
             });

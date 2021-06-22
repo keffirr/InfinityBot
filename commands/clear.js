@@ -5,7 +5,7 @@ module.exports = {
     usage: '1-99',
     cooldown: 5,
     execute(message, args) {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return
+if(!message.member.guild.me.hasPermission("MANAGE_MESSAGES")) return
 		const amount = parseInt(args[0]) + 1;
     
         if (isNaN(amount)) {

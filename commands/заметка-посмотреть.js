@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const fs = require('fs')
 const path = require('path')
 module.exports = {
-	name: 'заметка посмотреть',
+	name: 'заметка-посмотреть',
 	description: 'eval',
 	cooldown: 5,
 	execute(message, args) {

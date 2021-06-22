@@ -7,6 +7,7 @@ module.exports = {
 	usage: '[command name]',
 	cooldown: 5,
 	execute(message, args) {
+		if(message.author.id === !message.author.id) {
         const prefix = '!'
 		const data = [];
 		const { commands } = message.client;
@@ -41,5 +42,5 @@ if (command.description) data.push(`**Описание:** ${command.description}
 if (command.usage) data.push(`**Использование:** ${prefix}${command.name} ${command.usage}`);
 
 message.channel.send(data, { split: true });
-	},
+	}},
 };

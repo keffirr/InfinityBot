@@ -11,39 +11,48 @@ module.exports = {
 	execute(message, args, client, api) {
     let a = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:anal') 
+    .setEmoji('🔎')
+    .setLabel(':anal') 
     .setID('1')
     let b = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:pussy') 
+    .setEmoji('🔎')
+    .setLabel('pussy') 
     .setID('2') 
     let c = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:hentai') 
+    .setEmoji('🔎')
+    .setLabel('hentai') 
     .setID('3')
     let d = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:pgif') 
+    .setEmoji('🔎')
+    .setLabel('pgif') 
     .setID('4')
     let r = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:neko') 
+    .setEmoji('🔎')
+    .setLabel('neko') 
     .setID('5')
     let e = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:boobs') 
+    .setEmoji('🔎')
+    .setLabel('boobs') 
     .setID('6')
     let w = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:cosplay') 
+    .setEmoji('🔎')
+    .setLabel('cosplay') 
     .setID('7')
     let u = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:4k') 
+    .setEmoji('🔎')
+    .setLabel('4k') 
     .setID('8')
     let o = new MessageButton()
     .setStyle('blurple')
-    .setLabel(':mag_right:ass') 
+    .setEmoji('🔎')
+    .setLabel('ass') 
     .setID('9')
     if(message.member.guild.me.hasPermission('ADMINISTRATOR') || message.member.guild.me.hasPermmission('MANAGE_MESSAGES')){
     if(message.content === '!секс nsfw') return message.channel.send('Правильное использование \`\`\`!секс nsfw on\n!секс nsfw off\`\`\`')
@@ -60,7 +69,7 @@ module.exports = {
             if(button.id === '1') {
               const image = await api.get('anal');
               const embed = new Discord.MessageEmbed()
-              .setTitle("Anal")
+              .setTitle("anal")
               .setImage(image)
               .setColor('RANDOM')
               .setURL(image) 
@@ -90,7 +99,7 @@ module.exports = {
 		  if(button.id === '4') {
                   const image = await api.get('pgif');
                   const embed = new Discord.MessageEmbed()
-                  .setTitle("hentai")
+                  .setTitle("pgif")
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
@@ -100,7 +109,7 @@ module.exports = {
 		  if(button.id === '5') {
                   const image = await api.get('neko');
                   const embed = new Discord.MessageEmbed()
-                  .setTitle("hentai")
+                  .setTitle("neko")
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
@@ -110,7 +119,7 @@ module.exports = {
 		  if(button.id === '6') {
                   const image = await api.get('boobs');
                   const embed = new Discord.MessageEmbed()
-                  .setTitle("hentai")
+                  .setTitle("boobs")
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
@@ -120,7 +129,7 @@ module.exports = {
 		  if(button.id === '7') {
                   const image = await api.get('cosplay');
                   const embed = new Discord.MessageEmbed()
-                  .setTitle("hentai")
+                  .setTitle("cosplay")
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
@@ -130,7 +139,7 @@ module.exports = {
 		  if(button.id === '9') {
                   const image = await api.get('4k');
                   const embed = new Discord.MessageEmbed()
-                  .setTitle("hentai")
+                  .setTitle("4k")
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
@@ -140,7 +149,7 @@ module.exports = {
 		  if(button.id === '9') {
                   const image = await api.get('ass');
                   const embed = new Discord.MessageEmbed()
-                  .setTitle("hentai")
+                  .setTitle("ass")
                   .setImage(image)
                   .setColor('RANDOM')
                   .setURL(image) 
@@ -166,7 +175,7 @@ const search = [
   "hentai",
 ];
 if (message.channel.nsfw) {
-          return message.channel.send("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { components: [ buttonRow ] });
+          return message.channel.send("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { components: [ buttonRow. buttonRow2 ] });
 
         } else {
             message.channel.send(`поставьте метку NSFW, чтобы данная команда работала в канале <#${message.channel.id}>`)

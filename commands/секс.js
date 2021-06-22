@@ -175,7 +175,7 @@ const search = [
   "hentai",
 ];
 if (message.channel.nsfw) {
-          return message.channel.send("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { components: [ buttonRow. buttonRow2 ] });
+          return message.channel.send("Выбери нажав на одну из кнопок, чтобы увидеть нужный контент", { components: [ buttonRow, buttonRow2 ] });
 
         } else {
             message.channel.send(`поставьте метку NSFW, чтобы данная команда работала в канале <#${message.channel.id}>`)

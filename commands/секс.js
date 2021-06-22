@@ -49,16 +49,14 @@ module.exports = {
     .setEmoji('🔎')
     .setLabel('ass') 
     .setID('9')
-    if(message.member.guild.me.hasPermission('ADMINISTRATOR') || message.member.guild.me.hasPermission('MANAGE_MESSAGES')){
     if(message.content === '!секс nsfw') return message.channel.send('Правильное использование \`\`\`!секс nsfw on\n!секс nsfw off\`\`\`')
+if(message.member.guild.me.hasPermission('ADMINISTRATOR') || message.member.guild.me.hasPermission('MANAGE_MESSAGES')){
     if(message.content === '!секс nsfw on') return message.channel.setNSFW(true), message.channel.send('NSFW метка успешно включена').then(message => {
         message.delete({ timeout: 10000 })
       })
     if(message.content === '!секс nsfw off') return message.channel.setNSFW(false), message.channel.send('NSFW метка успешно выключена').then(message => {
         message.delete({ timeout: 10000 })
       })
-    } else {
-	    message.channel.send('Недостаточно прав для использования данной команды, чтобы использовать даанную команду вам нужно иметь одно из из перечисленных прав \`Администратор\`, \`Управление сообщениями\`.')
     }
           client.on('clickButton', async (button) => {
             if(button.id === '1') {

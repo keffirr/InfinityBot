@@ -39,12 +39,12 @@ const command = client.commands.get(commandName)
 
 if (!command) return;
 if (command.guildOnly && message.channel.type === 'dm') {
-    return message.reply('I can\'t execute that command inside DMs!');
+    return message.reply('Выполнение данной команды в личных сообщениях выключено!');
 }
 	if (command.permissions) {
 	const authorPerms = message.channel.permissionsFor(message.author);
 	if (!authorPerms || !authorPerms.has(command.permissions)) {
-		return message.reply('You can not do this!');
+		return message.reply('У вас недостаточно прав для использования этой команды!');
 	}
 }
 	

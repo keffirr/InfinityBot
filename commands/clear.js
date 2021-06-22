@@ -8,8 +8,7 @@ module.exports = {
     guildOnly: true,
     permissions: 'MANAGE_MESSAGES',
     execute(message, args) {
-if(message.author.bot) return
-message.channel.send('У вас недостаточно прав для использования этой команды, чтобы ее использовать вам нужно иметь право на удаление сообщений.')
+if(message.author.bot) return message.channel.send('У вас недостаточно прав для использования этой команды, чтобы ее использовать вам нужно иметь право на удаление сообщений.')
 		const amount = parseInt(args[0]) + 1;
     
         if (isNaN(amount)) {

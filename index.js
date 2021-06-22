@@ -162,9 +162,91 @@ const path = require('path');
 var server = express();
 var port = process.env.PORT || 8080; // <== this is must
 
-server.get('/status', (req, res) => {
+server.get('/', (req, res) => {
+const loading = Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100
+    res.send(`<!doctype html>
+    <html>
+    
+    <head>
+    <title>Infinity Bot Status</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Infinity Bot Status"/>
+        <meta property="og:description" content="Хотите узнать работает ли сейчас бот на INFINITY DREAM? Тогда посмотри на этом сайте!"/>
+        <meta property="og:image" content="https://i.imgur.com/dPW7gbh.png"/>
+        <meta property="og:url" content="https://status.romoz.ml"/>
+        <meta property="og:site_name" content="Status Page"/>
+        <meta name="theme-color" content="#FFFFFF"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://i.imgur.com/dPW7gbh.png">
+    </head>
+      <body>
+    <body>
+    <body>
+    <style>
+    a.knopka {
+      text-align: right;
+      color: #fff; /* цвет текста */
+      text-decoration: none; /* убирать подчёркивание у ссылок */
+      user-select: none; /* убирать выделение текста */
+      background: #5865f2; /* фон кнопки */
+      padding: .55em 1.5em; /* отступ от текста */
+      outline: none; /* убирать контур в Mozilla */
+    } 
+    a.knopka:hover { background: rgb(77,88,246); } /* при наведении курсора мышки */
+    a.knopka:active { background: rgb(72,83,225); } /* при нажатии */
+    
+    a.lol {
+      text-align: right;
+      color: #fff; /* цвет текста */
+      text-decoration: none; /* убирать подчёркивание у ссылок */
+      user-select: none; /* убирать выделение текста */
+      background: #232428; /* фон кнопки */
+      padding: .60em 1.5em; /* отступ от текста */
+      outline: none; /* убирать контур в Mozilla */
+    } 
+        body {
+        background-color: #232428;
+    }
+    h1 {
+        background-color: #232428;
+    }
+    p {
+        background-color: #232428);
+    }
+@media  screen and (min-width: 1400px) {
+  .header-pc {
+    display: none
+  }
+  .header-mobile {
+    display: block
+  }
+}
+@media (max-width:1000px) {
+  .hidden_max1000 {display:none;}
+}
+          
+          </style>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <div class="header-pc"><p><a class="lol"></a></p></div>
+    <p><h1 align="center" style="color:#FFFFFF"><font face="Arial">Бот работает ${Math.floor(process.uptime() / 86400)} дней, ${Math.floor(process.uptime() / 3600)} часов, ${Math.floor(process.uptime() / 60)} минут и ${Math.floor(process.uptime() % 60)} секунд</h1></p></center>
+    <center><b><p><h1 align="center" style="color:#FFFFFF"><font face="Arial">Бот нагружен на ${loading}MB</h1></p></b></center>
+<center><h1 align="center"><font face="Arial"><a class="knopka" target="_blank" href="https://stats.uptimerobot.com/MBZwZU5Z7z">Подробнее</a></h1></center>
+    <p><a class="lol"></a></p>
+    <p><a class="lol"></a></p>
+    <p><a class="lol"></a></p>
+    <div class="header-mobile"><center><iframe 
+class="hidden_max1000" src="https://e.widgetbot.io/channels/662647231698042911/772855703596695572/" title="Discord chat embed" width="900" height="450" style="border: none;"></iframe></center></div>
+</body>
+</html> 
 
-        res.send(`<p>'Бот включен\nи нагружен на ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100} MB`)
+    
+        </body>
+        </body>
+    </html>
+    `)
 })
 
 server.listen(port, () => {

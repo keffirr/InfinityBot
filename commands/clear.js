@@ -10,7 +10,7 @@ if(!message.member.guild.me.hasPermission("MANAGE_MESSAGES")) return
     
         if (isNaN(amount)) {
             return message.reply('Это, кажется, не является допустимым числом.');
-        } else if (amount <= 0 || amount > 100) {
+        } else if (amount <= 1 || amount > 100) {
             return message.reply('Удалить можно только от 1 до 99 сообщений.');
         }
         message.channel.bulkDelete(amount, true); {

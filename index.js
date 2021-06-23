@@ -25,7 +25,7 @@ setTimeout(бот, 1)
 function бот(){
 client.on('rateLimit', (info) => {
 const user = client.users.cache.get(message.author.id);
-user.send(Рейт лимит на ${Math.round(info.timeout / 1000)  / 100 * 100} секунды, подождите пожалуйста!);
+user.send(`Рейт лимит на ${Math.round(info.timeout / 1000)  / 100 * 100} секунды, подождите пожалуйста!`);
 })
 process.on('unhandledRejection', error => {
     console.log(`${error}\n`)

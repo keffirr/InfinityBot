@@ -4,7 +4,8 @@
     const { prefix, token, owner} = require('./config.json');
     const { NekoBot } = require("nekobot-api");
     const api = new NekoBot();
-    const chalk = require('chalk')
+const chalk = require('chalk')
+const fetch = require('node-fetch');
     
     const client = new Discord.Client();
 const disbut = require('discord-buttons')(client)
@@ -78,7 +79,7 @@ if (timestamps.has(message.author.id)) {
     }
 }
     try {
-    command.execute(message, args, client, api, Discord, server, port, chalk);
+    command.execute(message, args, client, api, Discord, server, port, chalk, fetch);
 } catch (error) {
     console.error(error);
 }

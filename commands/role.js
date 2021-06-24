@@ -12,7 +12,7 @@ let d = client.ws.ping / 1000
 		message.channel.send(`test`, button)
 client.on('clickButton', async (button) => {
     if(button.id === '771297776042639360') {
-button.guild.roles.cache.get('771297776042639360');
+                    const role = button.guild.roles.cache.get('771297776042639360');
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     member.roles.add(role);
 await button.defer()

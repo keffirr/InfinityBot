@@ -6,7 +6,7 @@ module.exports = {
 	execute(message, args, client) {
             let button = new MessageButton()
                 .setStyle('red') // default: blurple
-                .setLabel(`Infinity`) // default: NO_LABEL_PROVIDED
+                .setLabel(`Infinity`) 
                 .setID(`771297776042639360`);
 let d = client.ws.ping / 1000
 		message.channel.send(`test`, button)

@@ -165,33 +165,6 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
   });
 }
 
-client.on('clickButton', async (button) => {
-    if(button.id === 'role') {
-                    const role = button.guild.roles.cache.get('805482287558295562');
-                    const member = message.guild.members.cache.get(button.clicker.user.id);
-                    member.roles.add(role);
-await button.defer()
-    }
-	    if(button.id === 'role2') {
-                    const role = button.guild.roles.cache.get('805638653099376700');
-                    const member = message.guild.members.cache.get(button.clicker.user.id);
-                    member.roles.add(role);
-await button.defer()
-    }
-	    if(button.id === 'role3') {
-                    const role = button.guild.roles.cache.get('805637594918027304');
-                    const member = message.guild.members.cache.get(button.clicker.user.id);
-                    member.roles.add(role);
-await button.defer()
-    }
-	    if(button.id === 'role4') {
-                    const role = button.guild.roles.cache.get('805636480587792404');
-                    const member = message.guild.members.cache.get(button.clicker.user.id);
-                    member.roles.add(role);
-await button.defer()
-    }
-})
-
 client.login(process.env.BOT_TOKEN); 
 	const express = require('express');
 const path = require('path');

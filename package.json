@@ -32,7 +32,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "pm2-runtime index.js --watch"
+    "start": "pm2 start index.js"
   },
   "keywords": [],
   "author": "Romoz",

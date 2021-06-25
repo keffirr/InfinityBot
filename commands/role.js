@@ -29,7 +29,6 @@ module.exports = {
 .addComponent(role2)
 .addComponent(role3)
 .addComponent(role4);
-let d = client.ws.ping / 1000
 		message.channel.send(`Нажми на кнопку, чтобы выбрать нужный цвет`, { components: [ buttonRow] })
 	},
 };

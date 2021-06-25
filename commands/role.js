@@ -29,7 +29,7 @@ module.exports = {
 .addComponent(role2)
 .addComponent(role3)
 .addComponent(role4);
-		message.channel.send(`Нажми на кнопку, чтобы выбрать нужный цвет`, { components: [ buttonRow] })
+		message.channel.send(`Нажми на кнопку, чтобы выбрать нужный цвет`, { components: [ buttonRow ] })
 client.on('clickButton', async (button) => {
     if(button.id === 'role') {
                     const role = button.guild.roles.cache.get('805482287558295562');

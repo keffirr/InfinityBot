@@ -3,16 +3,17 @@ const Discord = require('discord.js');
     const MessageEmbed = require('discord.js');
 const client = new Discord.Client();
 module.exports = {
-    name: 'rule',
+    name: 'role',
     description: 'Ping!',
     cooldown: 5,
-    execute(message, args) {
+    execute(message, args, client, MessageEmbed, Discord) {
     let role = new MessageButton()
     .setStyle('blurple')
     .setEmoji('✅')
     .setID('rule')
 	let buttonRow = new MessageActionRow()
 	.addComponent(role)
+	const hook = new Discord.WebhookClient('761546981910249482', 'KFPIL85SxQREs2EV6WPB_hgjmaYHpKdeLrPD4CJt-qjaTYi7Q2daa8s_0TxrBrC-rWl9');
 	const embed = new Discord.MessageEmbed()
 	.setDescription('**Нажмите на кнопку чтобы получить доступ к каналам\nClick on button to access channels**')
 	.setColor('FFFFFF')
@@ -21,9 +22,6 @@ module.exports = {
 	message.channel.send(`1 человека прошли верификацию`, { embed: embed, components: [ buttonRow ] }); 
 client.on('clickButton', async (button) => {
     if(button.id === 'rule') {
-	    const embed = new Discord.MessageEmbed()
-	.setDescription('**Нажмите на кнопку чтобы получить доступ к каналам\nClick on button to access channels**')
-	.setColor('FFFFFF')
         const give = '771297776042639360'
                     const role = button.guild.roles.cache.get(give);
                     const member = message.guild.members.cache.get(button.clicker.user.id);

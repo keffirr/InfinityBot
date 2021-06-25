@@ -4,18 +4,32 @@ module.exports = {
 	description: 'Ping!',
 	cooldown: 5,
 	execute(message, args, client) {
-            let button = new MessageButton()
-                .setStyle('red') // default: blurple
-                .setLabel(`Infinity`) 
-                .setID(`771297776042639360`);
+    let a = new MessageButton()
+    .setStyle('red')
+    .setEmoji('🟥')
+    .setLabel('Красный') 
+    .setID('role')
+    let b = new MessageButton()
+    .setStyle('red')
+    .setEmoji('🟨')
+    .setLabel('Желтый') 
+    .setID('role2') 
+    let c = new MessageButton()
+    .setStyle('red')
+    .setEmoji('⬜')
+    .setLabel('Белый') 
+    .setID('role3')
+    let d = new MessageButton()
+    .setStyle('red')
+    .setEmoji('🟦')
+    .setLabel('Синий') 
+    .setID('role4')
+    let buttonRow = new MessageActionRow()
+.addComponent(role)
+.addComponent(role2)
+.addComponent(role3)
+.addComponent(role4);
 let d = client.ws.ping / 1000
-		message.channel.send(`test`, button)
-client.on('clickButton', async (button) => {
-    if(button.id === '771297776042639360') {
-                    const role = button.guild.roles.cache.get('771297776042639360');
-                    const member = message.guild.members.cache.get(button.clicker.user.id);
-                    member.roles.add(role);
-await button.defer()
-    }})
+		message.channel.send(`Нажми на кнопку, чтобы выбрать нужный цвет`, { components: [ buttonRow] })
 	},
 };

@@ -1,5 +1,5 @@
     const fs = require('fs');
-    const Discord = require('discord.js');
+    const Discord = require('discord.js'); 
     const MessageEmbed = require('discord.js');
     const { prefix, token, owner} = require('./config.json');
     const { NekoBot } = require("nekobot-api");

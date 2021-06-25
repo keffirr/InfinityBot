@@ -63,6 +63,14 @@ await button.reply.send(`Роль <@&${give}> успешно выдана для
                     member.roles.add(role);
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
+        if(button.id === 'rule') {
+        const give = '771297776042639360'
+                    const role = button.guild.roles.cache.get(give);
+                    const member = message.guild.members.cache.get(button.clicker.user.id);
+                    if(message.member.roles.cache.has(give)) return await button.reply.send('Вы уже прошли верификацию, повторно ее пройти нельзя!', true)
+                    member.roles.add(role);
+await button.reply.send(`<@${button.clicker.user.id}> успешно прошел верификацию!`, true)
+    }
 })
 
     },

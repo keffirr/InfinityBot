@@ -1,9 +1,10 @@
 const { MessageButton, MessageActionRow } = require('discord-buttons');
+const MessageEmbed = require('discord.js');
 module.exports = {
     name: 'rule',
     description: 'Ping!',
     cooldown: 5,
-    execute(message, args, client, MessageEmbed, Discord) {
+    execute(message, args, client, Discord) {
     let role = new MessageButton()
     .setStyle('blurple')
     .setEmoji('✅')

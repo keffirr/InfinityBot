@@ -4,6 +4,7 @@
     const { prefix, token, owner} = require('./config.json');
     const { NekoBot } = require("nekobot-api");
     const api = new NekoBot();
+    const { Client } = require('pg')
 const chalk = require('chalk')
 const fetch = require('node-fetch');
     
@@ -19,6 +20,17 @@ const { MessageButton, MessageActionRow } = require('discord-buttons');
     
         client.commands.set(command.name, command);
     }
+
+const can = new Client({
+    host: 'ec2-54-78-36-245.eu-west-1.compute.amazonaws.com',
+    user: 'ivubeqwcncgzfk',
+    password: '335890c187c9aefa8e1f6fedb110a2b9bf89699070e982dcf079b15f668e2cd7',
+    database: 'dfmqt5bpb4qmgj',
+    port: '5432',
+    ssl: true
+})
+
+can.connect(console.log('[DATABASE] Подключение в базе данных успешно'))
 
 setTimeout(бот, 1)
 

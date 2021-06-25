@@ -21,6 +21,9 @@ module.exports = {
 	message.channel.send(`1 человека прошли верификацию`, { embed: embed, components: [ buttonRow ] }); 
 client.on('clickButton', async (button) => {
     if(button.id === 'rule') {
+	    const embed = new Discord.MessageEmbed()
+	.setDescription('**Нажмите на кнопку чтобы получить доступ к каналам\nClick on button to access channels**')
+	.setColor('FFFFFF')
         const give = '771297776042639360'
                     const role = button.guild.roles.cache.get(give);
                     const member = message.guild.members.cache.get(button.clicker.user.id);

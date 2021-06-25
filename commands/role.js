@@ -37,7 +37,6 @@ client.on('clickButton', async (button) => {
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-await button.think(true)
 await button.reply.send(`Роль <@&${give}> успешно выдана для<@${button.clicker.user.id}>!`, true)
     }
         if(button.id === 'role2') { 
@@ -46,7 +45,6 @@ await button.reply.send(`Роль <@&${give}> успешно выдана для
             const member = message.guild.members.cache.get(button.clicker.user.id);
             if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-await button.think(true)
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
         if(button.id === 'role3') {
@@ -55,7 +53,6 @@ await button.think(true)
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-await button.think(true)
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
         if(button.id === 'role4') {
@@ -64,7 +61,6 @@ await button.think(true)
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-await button.think(true)
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
 })

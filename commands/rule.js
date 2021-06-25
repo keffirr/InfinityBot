@@ -11,7 +11,6 @@ module.exports = {
     .setID('rule')
 	let buttonRow = new MessageActionRow()
 	.addComponent(role)
-	const hook = new Discord.WebhookClient('761546981910249482', 'KFPIL85SxQREs2EV6WPB_hgjmaYHpKdeLrPD4CJt-qjaTYi7Q2daa8s_0TxrBrC-rWl9');
 	const embed = new Discord.MessageEmbed()
 	.setDescription('**Нажмите на кнопку чтобы получить доступ к каналам\nClick on button to access channels**')
 	.setColor('FFFFFF')

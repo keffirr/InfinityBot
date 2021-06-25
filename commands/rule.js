@@ -3,7 +3,8 @@ module.exports = {
     name: 'rule',
     description: 'Ping!',
     cooldown: 5,
-    execute(message, args, client, Discord, MessageEmbed) {
+    execute(message, args, client, Discord) {
+	    const MessageEmbed = require('discord.js');
     let role = new MessageButton()
     .setStyle('blurple')
     .setEmoji('✅')

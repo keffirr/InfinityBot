@@ -1,6 +1,6 @@
     const fs = require('fs');
     const Discord = require('discord.js');
-    const RichEmbed = require('discord.js');
+    const MessageEmbed = require('discord.js');
     const { prefix, token, owner} = require('./config.json');
     const { NekoBot } = require("nekobot-api");
     const api = new NekoBot();
@@ -83,7 +83,7 @@ if (timestamps.has(message.author.id)) {
     }
 }
     try {
-    command.execute(message, args, client, api, Discord, server, port, chalk, fetch);
+    command.execute(message, args, client, api, Discord, server, port, chalk, fetch, MessageEmbed);
 } catch (error) {
     console.error(error);
 }

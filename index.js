@@ -31,7 +31,7 @@ user.send(`Рейт лимит на ${Math.round(info.timeout / 1000)  / 100 * 1
 process.on('unhandledRejection', error => {
     console.log(`${error}\n`)
 });
-
+ 
     client.once('ready', () => {
         console.log('Ready!');
         client.user.setStatus("idle")

@@ -36,7 +36,6 @@ client.on('clickButton', async (button) => {
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-button.message.edit(`${eval(1 + button.message.content[0] - 9)} человека прошли верификацию`, { embed: embed, components: [ buttonRow ] })
 await button.reply.send(`Роль <@&${give}> успешно выдана для<@${button.clicker.user.id}>!`, true)
     }
         if(button.id === 'role2') { 
@@ -45,7 +44,6 @@ await button.reply.send(`Роль <@&${give}> успешно выдана для
             const member = message.guild.members.cache.get(button.clicker.user.id);
             if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-button.message.edit(`${eval(1 + button.message.content[0] - 9)} человека прошли верификацию`, { embed: embed, components: [ buttonRow ] })
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
         if(button.id === 'role3') {
@@ -54,17 +52,24 @@ button.message.edit(`${eval(1 + button.message.content[0] - 9)} человека
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-button.message.edit(`${eval(1 + button.message.content[0] - 9)} человека прошли верификацию`, { embed: embed, components: [ buttonRow ] })
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
         if(button.id === 'role4') {
-            const give = '771297776042639360'
+            const give = '805636480587792404'
                     const role = button.guild.roles.cache.get(give);
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
-button.message.edit(`${eval(1 + button.message.content[0] - 9)} человека прошли верификацию`, { embed: embed, components: [ buttonRow ] })
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
+    }
+if(button.id === 'rule') {
+        const give = '771297776042639360'
+                    const role = button.guild.roles.cache.get(give);
+                    const member = message.guild.members.cache.get(button.clicker.user.id);
+                    member.roles.add(role);
+                    if(message.member.roles.cache.has(give)) return message.guild.members.cache.get(button.clicker.user.id).send('Вы уже прошли верификацию, повторно ее пройти нельзя!'), await button.defer()
+    button.message.edit(`${eval(1 + button.message.content[0] - 9)} человека прошли верификацию`, { embed: embed })
+await button.reply.send(`<@${button.clicker.user.id}> успешно прошел верификацию!`, true)
     }
 })
 

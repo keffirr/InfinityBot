@@ -34,7 +34,7 @@ client.on('clickButton', async (button) => {
         const give = '805482287558295562'
                     const role = button.guild.roles.cache.get(give);
                     const member = message.guild.members.cache.get(button.clicker.user.id);
-                    if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
+                    if(message.member.roles.cache.has(give)) return member.roles.remove(give), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
 await button.reply.send(`Роль <@&${give}> успешно выдана для<@${button.clicker.user.id}>!`, true)
     }
@@ -42,7 +42,7 @@ await button.reply.send(`Роль <@&${give}> успешно выдана для
             const give = '805638653099376700'
             const role = button.guild.roles.cache.get(give);
             const member = message.guild.members.cache.get(button.clicker.user.id);
-            if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
+            if(message.member.roles.cache.has(give)) return member.roles.remove(give), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
@@ -50,7 +50,7 @@ await button.reply.send(`Роль <@&${give}> успешно выдана для
             const give = '805637594918027304'
                     const role = button.guild.roles.cache.get(give);
                     const member = message.guild.members.cache.get(button.clicker.user.id);
-                    if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
+                    if(message.member.roles.cache.has(give)) return member.roles.remove(give), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }
@@ -58,7 +58,7 @@ await button.reply.send(`Роль <@&${give}> успешно выдана для
             const give = '805636480587792404'
                     const role = button.guild.roles.cache.get(give);
                     const member = message.guild.members.cache.get(button.clicker.user.id);
-                    if(message.member.roles.cache.has(give)) return member.roles.remove(role), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
+                    if(message.member.roles.cache.has(give)) return member.roles.remove(give), await button.reply.send(`Роль <@&${give}> успешно убрана у <@${button.clicker.user.id}>!`, true)
                     member.roles.add(role);
                     await button.reply.send(`Роль <@&${give}> успешно выдана для <@${button.clicker.user.id}>!`, true)
     }

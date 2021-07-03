@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js'); 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('database', 'user', 'password', {
 	host: 'localhost',

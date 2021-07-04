@@ -18,7 +18,7 @@ let button2 = new MessageButton()
 .setLabel(button.message.content[0] + 1)
 .setID(`clicker`);
     if(button.id === 'clicker') {
-button.message.edit(`${button2.label} раз нажали на кнопку`, button2)
+button.reply.send(`${button2.label} раз нажали на кнопку`, button2, { type: 7 })
 }
 })
 }}

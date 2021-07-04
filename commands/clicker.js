@@ -15,10 +15,9 @@ let button = new MessageButton()
 client.on('clickButton', async (button) => {
 let button2 = new MessageButton()
 .setStyle('red') 
-.setLabel(eval(button.message.content[0] + -1))
+.setLabel(Math.round(button.message.content[0] + 1))
 .setID(`clicker`);
     if(button.id === 'clicker') {
-message.channel.messages.fetch(button.message.id).then(msg => msg.delete())
 button.reply.send(`${button2.label} раз нажали на кнопку`, button2)
 }
 })

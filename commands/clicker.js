@@ -13,12 +13,12 @@ let button = new disbut.MessageButton()
 .setID(`clicker`);
     message.channel.send(`${button.label} раз нажали на кнопку`, button)
 client.on('clickButton', async (button) => {
-let button = new disbut.MessageButton()
+let button2 = new disbut.MessageButton()
 .setStyle('red') 
 .setLabel(button.message.content[0] + 1)
 .setID(`clicker`);
     if(button.id === 'clicker') {
-button.message.edit(`${button.label} раз нажали на кнопку`, button)
+button.message.edit(`${button2.label} раз нажали на кнопку`, button2)
 }
 })
 }}

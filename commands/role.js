@@ -71,6 +71,10 @@ if(button.id === 'rule') {
     button.message.edit(`${eval(1 + button.message.content[0] - 9)} человека прошли верификацию`, { embed: embed })
 await button.reply.send(`<@${button.clicker.user.id}> успешно прошел верификацию!`, true)
     }
+    if(button.id === 'Купить') {
+client.users.cache.get(button.clicker.user.id).send('Чтобы купить нитро, вам нужно написать в личные сообщения Ромозу (<@851924727685840906>) ❄️Romoz❄️#9594')
+await button.reply.send('Чтобы купить нитро, вам нужно написать в личные сообщения Ромозу (<@851924727685840906>) ❄️Romoz❄️#9594', true)
+}
 })
 
     },

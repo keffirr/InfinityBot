@@ -15,10 +15,10 @@ let button = new MessageButton()
 client.on('clickButton', async (button) => {
 let button2 = new MessageButton()
 .setStyle('red') 
-.setLabel(eval(button.message.content[0] + 1))
+.setLabel(eval(button.message.content[0] + -1))
 .setID(`clicker`);
     if(button.id === 'clicker') {
-button.reply.send(`${button2.label} раз нажали на кнопку`, button2, { type: 7 })
+button.reply.send(`${button2.label} раз нажали на кнопку`, button2)
 }
 })
 }}

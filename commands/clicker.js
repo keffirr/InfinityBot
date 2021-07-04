@@ -7,7 +7,7 @@ module.exports = {
     description: 'Ping!',
     cooldown: 5,
     execute(message, args, client, MessageEmbed, Discord) {
-const colors = [
+const colors = [ 
 'red',
 'green',
 'blurple',

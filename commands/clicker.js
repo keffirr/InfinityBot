@@ -22,3 +22,4 @@ button.message.edit(`${button.label} раз нажали на кнопку`, but
 }
 })
 }}
+ 

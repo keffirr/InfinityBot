@@ -19,7 +19,7 @@ let button = new MessageButton()
 .setLabel(1)
 .setID(`clicker`);
     message.channel.send(`${button.label}`, button).then(message => {
-                message.delete({ timeout: 10000 })
+                message.delete({ timeout: 10000 })})
 client.on('clickButton', async (button) => {
 let button2 = new MessageButton()
 .setStyle(randomColor) 
@@ -27,7 +27,7 @@ let button2 = new MessageButton()
 .setID(`clicker`);
     if(button.id === 'clicker') {
 button.reply.send(`${button2.label}`, button2).then(message => {
-                message.delete({ timeout: 10000 })
+                message.delete({ timeout: 10000 })})
 }
 })
 }}

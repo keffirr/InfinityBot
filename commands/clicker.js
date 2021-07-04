@@ -27,7 +27,7 @@ let button2 = new MessageButton()
 .setID(`clicker`);
     if(button.id === 'clicker') {
 button.reply.send(`${button2.label}`, button2).then(message => {
-                message.delete({ timeout: 100000 })})
+                setTimeout(()=>{ message.delete()}, 100000)})
 }
 })
 }}

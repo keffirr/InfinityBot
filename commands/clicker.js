@@ -27,7 +27,7 @@ let button2 = new MessageButton()
 .setID(`clicker`);
     if(button.id === 'clicker') {
 button.reply.send(`${button2.label}`, button2).then(message => {
-                setTimeout(()=>{ message.delete()}, message.guild.members.cache.get(await button.clicker.user.id).send(`Вы набрали ${button2.label} баллов`), 30000}})
+                setTimeout(()=>{ message.delete()}, message.guild.members.cache.get(await button.clicker.user.id).send(`Вы набрали ${button2.label} баллов`}, 30000)})
 }
 })
 }}

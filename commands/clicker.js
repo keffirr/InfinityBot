@@ -7,13 +7,13 @@ module.exports = {
     description: 'Ping!',
     cooldown: 5,
     execute(message, args, client, MessageEmbed, Discord) {
-let button = new disbut.MessageButton()
+let button = new MessageButton()
 .setStyle('red') 
 .setLabel(1)
 .setID(`clicker`);
     message.channel.send(`${button.label} раз нажали на кнопку`, button)
 client.on('clickButton', async (button) => {
-let button2 = new disbut.MessageButton()
+let button2 = new MessageButton()
 .setStyle('red') 
 .setLabel(button.message.content[0] + 1)
 .setID(`clicker`);

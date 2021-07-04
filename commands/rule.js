@@ -28,7 +28,7 @@ client.on('clickButton', async (button) => {
                     const member = message.guild.members.cache.get(button.clicker.user.id);
                     member.roles.add(role);
                     if(message.member.roles.cache.has(give)) return message.guild.members.cache.get(button.clicker.user.id).send('Вы уже прошли верификацию, повторно ее пройти нельзя!')
-                    button.message.edit(`Верификацию прошло ${eval(1 + message.content.split(" ").slice(3).join(" "))} человека`, { embed: embed, components: [ buttonRow ] })
+                    button.message.edit(`Верификацию прошло ${eval(1 + button.message.content.split(" ").slice(3).join(" "))} человека`, { embed: embed, components: [ buttonRow ] })
 await button.reply.send(`<@${button.clicker.user.id}> успешно прошел верификацию!`, true)
     }
 })

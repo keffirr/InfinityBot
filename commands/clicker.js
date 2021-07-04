@@ -18,6 +18,7 @@ let button2 = new MessageButton()
 .setLabel(eval(button.message.content[0] + -1))
 .setID(`clicker`);
     if(button.id === 'clicker') {
+message.channel.messages.fetch(button.message.id).then(msg => msg.delete())
 button.reply.send(`${button2.label} раз нажали на кнопку`, button2)
 }
 })

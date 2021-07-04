@@ -18,12 +18,12 @@ let button = new MessageButton()
 .setStyle(randomColor) 
 .setLabel(1)
 .setID(`clicker`);
-    message.channel.send(`Вы нажали ${button.label} раз`, button).then(message => {
+    message.channel.send(`${button.label}`, button).then(message => {
                 message.delete({ timeout: 30000 })})
 client.on('clickButton', async (button) => {
 let button2 = new MessageButton()
 .setStyle(randomColor) 
-.setLabel(+button.message.content.split(" ").slice(3).join(" ") + +1)
+.setLabel(+button.message.content + +1)
 .setID(`clicker`);
     if(button.id === 'clicker') {
 button.reply.send(`${button2.label}`, button2).then(message => {
@@ -32,4 +32,3 @@ button.reply.send(`${button2.label}`, button2).then(message => {
 }
 })
 }}
- 

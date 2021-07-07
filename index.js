@@ -39,6 +39,11 @@ process.on('unhandledRejection', error => {
     });
 
 client.on('message', message => {
+setInterval(()=>{
+client.channels.cache.get('856100613568724992').setName(`📊 Всего участников: ${client.guilds.cache.get('662647231698042911').members.cache.filter(member => +!member.user.bot + +member.user.bot).size}`)
+client.channels.cache.get('856100620838895647').setName(`📊 Ботов: ${client.guilds.cache.get('662647231698042911').members.cache.filter(member => member.user.bot).size}`)
+client.channels.cache.get('856100617280552970').setName(`📊 Людей: ${client.guilds.cache.get('662647231698042911').members.cache.filter(member => +!member.user.bot).size}`)
+}, 1000)
 const cooldowns = new Discord.Collection();
 if(message.content.startsWith())
 if (!message.content.startsWith(prefix) || message.author.bot) return;

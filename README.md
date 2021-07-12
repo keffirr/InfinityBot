@@ -5,7 +5,8 @@ const romoz = {
   pronouns: "He" | "Him",
   code: [Javascript, HTML, CSS],
   tools: [React, Node, Docker],
- fun-fact: "I'm learning to make discord bots! This repository is an example of my bot."
+ fun-fact: "I'm learning to make discord bots!
+This repository is an example of my bot."
 }
 ```
 ## 🔧 Technologies & Tools

@@ -14,7 +14,7 @@ if(message.author.bot) return message.channel.send('У вас недостато
         if (isNaN(amount)) {
             return message.reply('Это, кажется, не является допустимым числом.');
         } else if (amount <= 1 || amount > 100) {
-            return message.reply('Удалить можно только от 1 до 99 сообщений.');
+            return message.reply('`Удалить` можно только от `1` до `99` сообщений.');
         }
         message.channel.bulkDelete(amount, true); {
             message.channel.send(`удалено ${args[0]} сообщений\(я\)`).then(message => {

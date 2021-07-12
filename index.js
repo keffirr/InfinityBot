@@ -35,7 +35,7 @@ process.on('unhandledRejection', error => {
     client.once('ready', () => {
         console.log('Ready!');
         client.user.setStatus("idle")
-        client.user.setActivity("I̶N̶F̶I̶N̶I̶T̶Y̶ D̶R̶E̶A̶M̶ ", { type: 'WATCHING' });
+        client.user.setActivity("https://discord.gg/jWeSyZqchx", { type: 'WATCHING' });
     });
 
 client.on('message', message => {

@@ -7,7 +7,7 @@ module.exports = {
     cooldown: 5,
     execute(message, args) {
         const av = new Discord.MessageEmbed() 
-    .setTitle(`Ваш аватар`)
+    .setTitle(`Ваш аватар:`)
     .setColor('RANDOM')
     .setImage(`${message.author.displayAvatarURL({dynamic: true, size: 2048 })}`);
 		if (!message.mentions.users.size) {
